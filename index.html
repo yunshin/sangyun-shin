@@ -32,14 +32,22 @@
     }
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .container { max-width: 760px; margin: 0 auto; padding: 1em 1em 3em; }
-    header { padding: 2em 0 1em; text-align: center; }
-    header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1em; }
-    header h1 { margin: 0; font-size: 2.4em; }
-    header p { margin: 0.5em 0 0; color: var(--muted); }
-    .links { margin-top: 1em; display: flex; justify-content: center; flex-wrap: wrap; gap: 1em; }
+    .container { max-width: 860px; margin: 0 auto; padding: 1em 1em 3em; }
+
+    header { padding: 2em 0 1em; }
+    .header-container { display: flex; align-items: center; gap: 2em; flex-wrap: wrap; }
+    .photo img {
+      max-width: 260px;
+      height: auto;
+      border-radius: 0; /* show full image, not circle */
+      object-fit: contain;
+    }
+    .intro h1 { margin: 0; font-size: 2.2em; }
+    .intro p { margin: 0.5em 0; color: var(--muted); }
+    .links { margin-top: 1em; display: flex; flex-wrap: wrap; gap: 1em; }
     .btn { border: 1px solid var(--border); padding: 0.4em 0.8em; border-radius: 0.25em; background-color: var(--bg); color: var(--fg); }
     .btn:hover { background-color: var(--border); }
+
     section { margin-top: 2em; }
     h2 { margin-bottom: 0.5em; font-size: 1.6em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
     ul { list-style: none; padding: 0; }
@@ -53,14 +61,20 @@
 <body>
   <div class="container">
     <header>
-      <img src="assets/profile.jpg" alt="Profile photo of Sangyun Shin" />
-      <h1>Sangyun Shin</h1>
-      <p>DPhil Researcher, Computer Science, University of Oxford</p>
-      <div class="links">
-        <a class="btn" href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a class="btn" href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank">LinkedIn</a>
-        <a class="btn" href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank">Oxford Profile</a>
-        <a class="btn" href="assets/Sangyun_Shin_CV.pdf" target="_blank">CV (PDF)</a>
+      <div class="header-container">
+        <div class="photo">
+          <img src="assets/profile.jpg" alt="Profile photo of Sangyun Shin" />
+        </div>
+        <div class="intro">
+          <h1>Sangyun Shin</h1>
+          <p>DPhil Researcher, Computer Science, University of Oxford</p>
+          <div class="links">
+            <a class="btn" href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+            <a class="btn" href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank">Oxford Profile</a>
+            <a class="btn" href="assets/Sangyun_Shin_CV.pdf" target="_blank">CV (PDF)</a>
+          </div>
+        </div>
       </div>
     </header>
 
