@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sangyun Shin</title>
+  <meta name="description" content="Sangyun Shin – DPhil researcher in Computer Science, University of Oxford" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #202124;
+      --muted: #5f6368;
+      --link: #1a73e8;
+      --border: #e0e0e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #202124;
+        --fg: #e8eaed;
+        --muted: #9aa0a6;
+        --link: #8ab4f8;
+        --border: #3c4043;
+      }
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: “Segoe UI”, Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 1em 1em 3em;
+    }
+    header {
+      padding: 2em 0 1em;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4em;
+    }
+    header p {
+      margin: 0.5em 0 0;
+      color: var(--muted);
+    }
+    .links {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+    }
+    .btn {
+      border: 1px solid var(--border);
+      padding: 0.4em 0.8em;
+      border-radius: 0.25em;
+      background-color: var(--bg);
+      color: var(--fg);
+    }
+    .btn:hover {
+      background-color: var(--border);
+    }
+    section {
+      margin-top: 2em;
+    }
+    h2 {
+      margin-bottom: 0.5em;
+      font-size: 1.6em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3em;
+    }
+    ul.publist {
+      list-style: none;
+      padding: 0;
+    }
+    ul.publist li {
+      margin: 1em 0;
+    }
+    .pubtitle {
+      font-weight: bold;
+    }
+    .venue {
+      color: var(--muted);
+      font-size: 0.95em;
+    }
+    .small {
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+    footer {
+      margin-top: 3em;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85em;
+      border-top: 1px solid var(--border);
+      padding-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sangyun Shin</h1>
+      <p>DPhil Researcher, Computer Science, University of Oxford</p>
+      <div class="links">
+        <a class="btn" href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a class="btn" href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank">Oxford Profile</a>
+        <!-- <a class="btn" href="assets/CV.pdf" target="_blank">CV (PDF)</a> -->
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a DPhil (PhD) researcher in the Department of Computer Science at the University of Oxford and a member of Worcester College. My research is centered on **3D vision**, **robotics**, and **domain adaptation**, especially for building robust perception in real-world settings.
+      </p>
+      <p>
+        Under the supervision of Prof. Niki Trigoni and Prof. Andrew Markham, I explore techniques such as group-equivariant learning, 3D pose estimation, and cross-domain generalization. Some of my work extends to interdisciplinary applications such as wildlife motion capture.
+      </p>
+    </section>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul>
+        <li><span class="small">2025-05</span> Worked on “WildPose: A Long-Range 3D Wildlife Motion Capture System” published in Journal of Experimental Biology.</li>
+        <li><span class="small">2024-12</span> Proposed <em>GroupEXP-DA</em> in “Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection” (NeurIPS 2024).</li>
+        <li><span class="small">2023-08</span> Published “Learning Rotation-Equivariant Features for Visual Correspondence.”</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <ul class="publist">
+        <li>
+          <span class="pubtitle">Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</span> <span class="venue">(NeurIPS 2024)</span><br />
+          <span class="small">Proposes <em>GroupEXP-DA</em>, tackling domain shift in 3D detection by learning group-equivariant spatial features. <a href="https://neurips.cc/virtual/2024/poster/94710" target="_blank">Paper</a></span>
+        </li>
+        <li>
+          <span class="pubtitle">WildPose: A Long-Range 3D Wildlife Motion Capture System</span> <span class="venue">(Journal of Experimental Biology, 2025)</span><br />
+          <span class="small">Hybrid zoom-lens + LiDAR system for nonintrusive motion capture. <a href="https://www.cs.ox.ac.uk/publications/publication16460-abstract.html" target="_blank">Overview</a></span>
+        </li>
+        <li>
+          <span class="pubtitle">Learning Rotation-Equivariant Features for Visual Correspondence</span> <span class="venue">(2023)</span><br />
+          <span class="small">Explores equivariant representations for 2D/3D correspondence. <a href="https://www.researchgate.net/publication/373326033_Learning_Rotation-Equivariant_Features_for_Visual_Correspondence" target="_blank">Preprint</a></span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:sangyun.shin@cs.ox.ac.uk">sangyun.shin@cs.ox.ac.uk</a></p>
+      <p class="small">I’m open to collaborations, internships, and research discussions. Feel free to reach out!</p>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Sangyun Shin</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
