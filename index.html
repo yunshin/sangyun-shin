@@ -32,107 +32,138 @@
     }
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .container { max-width: 860px; margin: 0 auto; padding: 1em 1em 3em; }
 
-    header { padding: 2em 0 1em; }
-    .header-container { display: flex; align-items: center; gap: 2em; flex-wrap: wrap; }
-    .photo img {
-      max-width: 260px;
-      height: auto;
-      border-radius: 0; /* show full image, not circle */
-      object-fit: contain;
+    .layout {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2em;
+      gap: 2em;
     }
-    .intro h1 { margin: 0; font-size: 2.2em; }
-    .intro p { margin: 0.5em 0; color: var(--muted); }
-    .links { margin-top: 1em; display: flex; flex-wrap: wrap; gap: 1em; }
-    .btn { border: 1px solid var(--border); padding: 0.4em 0.8em; border-radius: 0.25em; background-color: var(--bg); color: var(--fg); }
-    .btn:hover { background-color: var(--border); }
+    .sidebar {
+      flex: 0 0 260px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+      padding-right: 1.5em;
+    }
+    .sidebar img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0;
+      margin-bottom: 1em;
+    }
+    .sidebar h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    .sidebar p {
+      color: var(--muted);
+      margin: 0.5em 0 1em;
+    }
+    .sidebar .links a {
+      display: block;
+      margin: 0.3em 0;
+    }
 
-    section { margin-top: 2em; }
-    h2 { margin-bottom: 0.5em; font-size: 1.6em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em; }
+    .content {
+      flex: 1;
+      padding-left: 1em;
+    }
+    section { margin-bottom: 2em; }
+    h2 {
+      margin-bottom: 0.5em;
+      font-size: 1.6em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3em;
+    }
     ul { list-style: none; padding: 0; }
     ul.publist li, ul.news li, ul.projects li { margin: 1em 0; }
     .pubtitle { font-weight: bold; }
     .venue { color: var(--muted); font-size: 0.95em; }
     .small { color: var(--muted); font-size: 0.9em; }
-    footer { margin-top: 3em; text-align: center; color: var(--muted); font-size: 0.85em; border-top: 1px solid var(--border); padding-top: 1em; }
+    footer {
+      margin-top: 3em;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85em;
+      border-top: 1px solid var(--border);
+      padding-top: 1em;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="header-container">
-        <div class="photo">
-          <img src="assets/profile.jpg" alt="Profile photo of Sangyun Shin" />
-        </div>
-        <div class="intro">
-          <h1>Sangyun Shin</h1>
-          <p>DPhil Researcher, Computer Science, University of Oxford</p>
-          <div class="links">
-            <a class="btn" href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank">Google Scholar</a>
-            <a class="btn" href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank">LinkedIn</a>
-            <a class="btn" href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank">Oxford Profile</a>
-            <a class="btn" href="assets/Sangyun_Shin_CV.pdf" target="_blank">CV (PDF)</a>
-          </div>
-        </div>
+  <div class="layout">
+    <!-- Left column -->
+    <aside class="sidebar">
+      <img src="assets/profile.jpg" alt="Profile photo of Sangyun Shin" />
+      <h1>Sangyun Shin</h1>
+      <p>DPhil Researcher<br>Computer Science<br>University of Oxford</p>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank">LinkedIn</a>
+        <a href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank">Oxford Profile</a>
+        <a href="assets/Sangyun_Shin_CV.pdf" target="_blank">CV (PDF)</a>
       </div>
-    </header>
+    </aside>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a DPhil (PhD) researcher in the Department of Computer Science at the University of Oxford and a member of Worcester College. My research is centered on <strong>3D vision</strong>, <strong>robotics</strong>, and <strong>domain adaptation</strong>, especially for building robust perception in real-world settings.
-      </p>
-      <p>
-        Under the supervision of Prof. Niki Trigoni and Prof. Andrew Markham, I explore techniques such as group-equivariant learning, 3D pose estimation, and cross-domain generalization. Some of my work extends to interdisciplinary applications such as wildlife motion capture.
-      </p>
-    </section>
+    <!-- Right column -->
+    <main class="content">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a DPhil (PhD) researcher in the Department of Computer Science at the University of Oxford and a member of Worcester College. My research is centered on <strong>3D vision</strong>, <strong>robotics</strong>, and <strong>domain adaptation</strong>, especially for building robust perception in real-world settings.
+        </p>
+        <p>
+          Under the supervision of Prof. Niki Trigoni and Prof. Andrew Markham, I explore techniques such as group-equivariant learning, 3D pose estimation, and cross-domain generalization. Some of my work extends to interdisciplinary applications such as wildlife motion capture.
+        </p>
+      </section>
 
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news">
-        <li><span class="small">2025-05</span> Published <em>WildPose: A Long-Range 3D Wildlife Motion Capture System</em> in Journal of Experimental Biology.</li>
-        <li><span class="small">2024-12</span> Presented <em>Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</em> at NeurIPS 2024.</li>
-        <li><span class="small">2023-08</span> Released preprint on <em>Learning Rotation-Equivariant Features for Visual Correspondence</em>.</li>
-      </ul>
-    </section>
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news">
+          <li><span class="small">2025-05</span> Published <em>WildPose: A Long-Range 3D Wildlife Motion Capture System</em> in Journal of Experimental Biology.</li>
+          <li><span class="small">2024-12</span> Presented <em>Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</em> at NeurIPS 2024.</li>
+          <li><span class="small">2023-08</span> Released preprint on <em>Learning Rotation-Equivariant Features for Visual Correspondence</em>.</li>
+        </ul>
+      </section>
 
-    <section id="publications">
-      <h2>Selected Publications</h2>
-      <ul class="publist">
-        <li>
-          <span class="pubtitle">Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</span> <span class="venue">(NeurIPS 2024)</span><br />
-          <span class="small">Proposes <em>GroupEXP-DA</em>, tackling domain shift in 3D detection by learning group-equivariant spatial features. <a href="https://neurips.cc/virtual/2024/poster/94710" target="_blank">Paper</a></span>
-        </li>
-        <li>
-          <span class="pubtitle">WildPose: A Long-Range 3D Wildlife Motion Capture System</span> <span class="venue">(Journal of Experimental Biology, 2025)</span><br />
-          <span class="small">Hybrid zoom-lens + LiDAR system for nonintrusive motion capture. <a href="https://www.cs.ox.ac.uk/publications/publication16460-abstract.html" target="_blank">Overview</a></span>
-        </li>
-        <li>
-          <span class="pubtitle">Learning Rotation-Equivariant Features for Visual Correspondence</span> <span class="venue">(2023)</span><br />
-          <span class="small">Explores equivariant representations for 2D/3D correspondence. <a href="https://www.researchgate.net/publication/373326033_Learning_Rotation-Equivariant_Features_for_Visual_Correspondence" target="_blank">Preprint</a></span>
-        </li>
-      </ul>
-    </section>
+      <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul class="publist">
+          <li>
+            <span class="pubtitle">Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</span> <span class="venue">(NeurIPS 2024)</span><br />
+            <span class="small">Proposes <em>GroupEXP-DA</em>, tackling domain shift in 3D detection by learning group-equivariant spatial features. <a href="https://neurips.cc/virtual/2024/poster/94710" target="_blank">Paper</a></span>
+          </li>
+          <li>
+            <span class="pubtitle">WildPose: A Long-Range 3D Wildlife Motion Capture System</span> <span class="venue">(Journal of Experimental Biology, 2025)</span><br />
+            <span class="small">Hybrid zoom-lens + LiDAR system for nonintrusive motion capture. <a href="https://www.cs.ox.ac.uk/publications/publication16460-abstract.html" target="_blank">Overview</a></span>
+          </li>
+          <li>
+            <span class="pubtitle">Learning Rotation-Equivariant Features for Visual Correspondence</span> <span class="venue">(2023)</span><br />
+            <span class="small">Explores equivariant representations for 2D/3D correspondence. <a href="https://www.researchgate.net/publication/373326033_Learning_Rotation-Equivariant_Features_for_Visual_Correspondence" target="_blank">Preprint</a></span>
+          </li>
+        </ul>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul class="projects">
-        <li><strong>WildPose</strong> – Building long-range wildlife motion capture systems with hybrid vision sensors.</li>
-        <li><strong>GroupEXP-DA</strong> – Framework for group-equivariant domain adaptive 3D detection.</li>
-        <li><strong>Rotation-Equivariant Features</strong> – Improving robustness of correspondence learning under rotations.</li>
-      </ul>
-    </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul class="projects">
+          <li><strong>WildPose</strong> – Building long-range wildlife motion capture systems with hybrid vision sensors.</li>
+          <li><strong>GroupEXP-DA</strong> – Framework for group-equivariant domain adaptive 3D detection.</li>
+          <li><strong>Rotation-Equivariant Features</strong> – Improving robustness of correspondence learning under rotations.</li>
+        </ul>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:sangyun.shin@cs.ox.ac.uk">sangyun.shin@cs.ox.ac.uk</a></p>
-      <p class="small">I’m open to collaborations, internships, and research discussions. Feel free to reach out!</p>
-    </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sangyun.shin@cs.ox.ac.uk">sangyun.shin@cs.ox.ac.uk</a></p>
+        <p class="small">I’m open to collaborations, internships, and research discussions. Feel free to reach out!</p>
+      </section>
 
-    <footer>
-      <p>&copy; <span id="year"></span> Sangyun Shin</p>
-    </footer>
+      <footer>
+        <p>&copy; <span id="year"></span> Sangyun Shin</p>
+      </footer>
+    </main>
   </div>
 
   <script>
