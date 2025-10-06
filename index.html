@@ -38,9 +38,9 @@
     .sidebar img {
       width: 220px;
       height: 220px;
-      border-radius: 50%; /* circular */
-      object-fit: contain; /* show full image, not cropped */
-      background-color: #f5f5f5; /* fill empty space */
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: #f5f5f5;
       margin-bottom: 1em;
     }
     .sidebar h1 {
@@ -56,14 +56,9 @@
       margin: 0.3em 0;
       font-size: 1.05em;
     }
-    .sidebar .links i {
-      margin-right: 8px;
-    }
+    .sidebar .links i { margin-right: 8px; }
 
-    .content {
-      flex: 1;
-      padding-left: 1em;
-    }
+    .content { flex: 1; padding-left: 1em; }
     section { margin-bottom: 2em; }
     h2 {
       margin-bottom: 0.5em;
@@ -71,11 +66,40 @@
       border-bottom: 1px solid #e0e0e0;
       padding-bottom: 0.3em;
     }
-    ul { list-style: none; padding: 0; }
-    ul.publist li, ul.news li, ul.projects li { margin: 1em 0; }
-    .pubtitle { font-weight: bold; }
-    .venue { color: #5f6368; font-size: 0.95em; }
     .small { color: #5f6368; font-size: 0.9em; }
+
+    .publication {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1.5em;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 1em;
+      flex-wrap: wrap;
+    }
+    .pub-thumb { flex: 0 0 160px; }
+    .pub-thumb img {
+      max-width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .pub-details { flex: 1; }
+    .pub-details .title {
+      font-weight: bold;
+      font-size: 1.05em;
+      margin-bottom: 0.3em;
+    }
+    .pub-details .authors {
+      font-size: 0.95em;
+      margin-bottom: 0.2em;
+    }
+    .pub-details .authors b { color: #000; }
+    .pub-details .venue {
+      color: #5f6368;
+      font-size: 0.9em;
+      margin-bottom: 0.4em;
+    }
+    .pub-details .links a { margin-right: 1em; font-size: 0.9em; }
+
     footer {
       margin-top: 3em;
       text-align: center;
@@ -86,10 +110,7 @@
     }
 
     @media (max-width: 768px) {
-      .layout {
-        flex-direction: column;
-        padding: 1em;
-      }
+      .layout { flex-direction: column; padding: 1em; }
       .sidebar {
         border-right: none;
         border-bottom: 1px solid #e0e0e0;
@@ -103,7 +124,6 @@
 </head>
 <body>
   <div class="layout">
-    <!-- Left column -->
     <aside class="sidebar">
       <img src="assets/profile.jpg" alt="Profile photo of Sangyun Shin" />
       <h1>Sangyun Shin</h1>
@@ -116,7 +136,6 @@
       </div>
     </aside>
 
-    <!-- Right column -->
     <main class="content">
       <section id="about">
         <h2>About Me</h2>
@@ -139,20 +158,52 @@
 
       <section id="publications">
         <h2>Selected Publications</h2>
-        <ul class="publist">
-          <li>
-            <span class="pubtitle">Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</span> <span class="venue">(NeurIPS 2024)</span><br />
-            <span class="small">Proposes <em>GroupEXP-DA</em>, tackling domain shift in 3D detection by learning group-equivariant spatial features. <a href="https://neurips.cc/virtual/2024/poster/94710" target="_blank">Paper</a></span>
-          </li>
-          <li>
-            <span class="pubtitle">WildPose: A Long-Range 3D Wildlife Motion Capture System</span> <span class="venue">(Journal of Experimental Biology, 2025)</span><br />
-            <span class="small">Hybrid zoom-lens + LiDAR system for nonintrusive motion capture. <a href="https://www.cs.ox.ac.uk/publications/publication16460-abstract.html" target="_blank">Overview</a></span>
-          </li>
-          <li>
-            <span class="pubtitle">Learning Rotation-Equivariant Features for Visual Correspondence</span> <span class="venue">(2023)</span><br />
-            <span class="small">Explores equivariant representations for 2D/3D correspondence. <a href="https://www.researchgate.net/publication/373326033_Learning_Rotation-Equivariant_Features_for_Visual_Correspondence" target="_blank">Preprint</a></span>
-          </li>
-        </ul>
+
+        <div class="publication">
+          <div class="pub-thumb">
+            <img src="assets/paper1-thumb.jpg" alt="Thumbnail for GroupEXP-DA paper">
+          </div>
+          <div class="pub-details">
+            <div class="title">Towards Learning Group-Equivariant Features for Domain Adaptive 3D Detection</div>
+            <div class="authors"><b>Sangyun Shin</b>, John Doe, Jane Smith</div>
+            <div class="venue">NeurIPS 2024</div>
+            <div class="links">
+              <a href="https://neurips.cc/virtual/2024/poster/94710" target="_blank">[Paper]</a>
+              <a href="https://github.com/example/repo" target="_blank">[Code]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="pub-thumb">
+            <img src="assets/paper2-thumb.jpg" alt="Thumbnail for WildPose paper">
+          </div>
+          <div class="pub-details">
+            <div class="title">WildPose: A Long-Range 3D Wildlife Motion Capture System</div>
+            <div class="authors"><b>Sangyun Shin</b>, John Doe, Jane Smith</div>
+            <div class="venue">Journal of Experimental Biology, 2025</div>
+            <div class="links">
+              <a href="https://www.cs.ox.ac.uk/publications/publication16460-abstract.html" target="_blank">[Paper]</a>
+              <a href="#" target="_blank">[Code]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="pub-thumb">
+            <img src="assets/paper3-thumb.jpg" alt="Thumbnail for Rotation-Equivariant Features paper">
+          </div>
+          <div class="pub-details">
+            <div class="title">Learning Rotation-Equivariant Features for Visual Correspondence</div>
+            <div class="authors"><b>Sangyun Shin</b>, John Doe, Jane Smith</div>
+            <div class="venue">2023</div>
+            <div class="links">
+              <a href="https://www.researchgate.net/publication/373326033_Learning_Rotation-Equivariant_Features_for_Visual_Correspondence" target="_blank">[Paper]</a>
+              <a href="#" target="_blank">[Code]</a>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <section id="projects">
