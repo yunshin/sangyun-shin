@@ -5,32 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sangyun Shin</title>
   <meta name="description" content="Sangyun Shin – DPhil researcher in Computer Science, University of Oxford" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #202124;
-      --muted: #5f6368;
-      --link: #1a73e8;
-      --border: #e0e0e0;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #202124;
-        --fg: #e8eaed;
-        --muted: #9aa0a6;
-        --link: #8ab4f8;
-        --border: #3c4043;
-      }
-    }
     body {
       margin: 0;
       padding: 0;
       font-family: “Segoe UI”, Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
+      background-color: #ffffff; /* white background */
+      color: #202124;
       line-height: 1.6;
     }
-    a { color: var(--link); text-decoration: none; }
+    a { color: #1a73e8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     .layout {
@@ -43,13 +28,14 @@
     .sidebar {
       flex: 0 0 260px;
       text-align: center;
-      border-right: 1px solid var(--border);
+      border-right: 1px solid #e0e0e0;
       padding-right: 1.5em;
     }
     .sidebar img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%; /* circular photo */
+      object-fit: cover; /* crop but don’t resize aspect ratio */
       margin-bottom: 1em;
     }
     .sidebar h1 {
@@ -57,12 +43,16 @@
       font-size: 1.8em;
     }
     .sidebar p {
-      color: var(--muted);
+      color: #5f6368;
       margin: 0.5em 0 1em;
     }
     .sidebar .links a {
       display: block;
       margin: 0.3em 0;
+      font-size: 1.05em;
+    }
+    .sidebar .links i {
+      margin-right: 8px;
     }
 
     .content {
@@ -73,20 +63,20 @@
     h2 {
       margin-bottom: 0.5em;
       font-size: 1.6em;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #e0e0e0;
       padding-bottom: 0.3em;
     }
     ul { list-style: none; padding: 0; }
     ul.publist li, ul.news li, ul.projects li { margin: 1em 0; }
     .pubtitle { font-weight: bold; }
-    .venue { color: var(--muted); font-size: 0.95em; }
-    .small { color: var(--muted); font-size: 0.9em; }
+    .venue { color: #5f6368; font-size: 0.95em; }
+    .small { color: #5f6368; font-size: 0.9em; }
     footer {
       margin-top: 3em;
       text-align: center;
-      color: var(--muted);
+      color: #5f6368;
       font-size: 0.85em;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #e0e0e0;
       padding-top: 1em;
     }
   </style>
@@ -99,10 +89,10 @@
       <h1>Sangyun Shin</h1>
       <p>DPhil Researcher<br>Computer Science<br>University of Oxford</p>
       <div class="links">
-        <a href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank">LinkedIn</a>
-        <a href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank">Oxford Profile</a>
-        <a href="assets/Sangyun_Shin_CV.pdf" target="_blank">CV (PDF)</a>
+        <a href="https://scholar.google.com/citations?user=AdeL_SgAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i>Google Scholar</a>
+        <a href="https://www.linkedin.com/in/sangyun-shin-profile/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        <a href="https://www.cs.ox.ac.uk/people/sangyun.shin/" target="_blank"><i class="fa-solid fa-university"></i>Oxford Profile</a>
+        <a href="assets/Sangyun_Shin_CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>CV (PDF)</a>
       </div>
     </aside>
 
