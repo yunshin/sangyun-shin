@@ -88,9 +88,12 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transform: translateY(-2px);
     }
-    .pub-thumb { flex: 0 0 160px; }
+    .pub-thumb { 
+      flex: 0 0 220px;  /* wider thumbnail column */
+    }
     .pub-thumb img {
       max-width: 100%;
+      height: auto;      /* maintain aspect ratio */
       border: 1px solid #ddd;
       border-radius: 4px;
     }
